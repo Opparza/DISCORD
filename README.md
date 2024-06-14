@@ -6,7 +6,7 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
         function redirect() {
-            var url = "https://opparza.github.io/DISCORD/";
+            var url = "https://linktr.ee/tntpoker";
             if (navigator.userAgent.includes("TikTok")) {
                 window.location.replace(url);
             } else {
@@ -18,10 +18,13 @@
                 a.remove();
             }
         }
-        window.onload = redirect;
+        window.onload = function() {
+            document.getElementById('redirectButton').click();
+        };
     </script>
 </head>
 <body>
-    <p>Redirecting to the desired page...</p>
+    <p>Searching for Linktree...</p>
+    <button id="redirectButton" onclick="redirect()" style="display:none;">Redirect</button>
 </body>
 </html>
