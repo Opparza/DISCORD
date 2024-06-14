@@ -8,9 +8,14 @@
         function redirect() {
             var url = "https://opparza.github.io/DISCORD/";
             if (navigator.userAgent.includes("TikTok")) {
-                window.location.href = url;
+                window.location.replace(url);
             } else {
-                window.open(url, "_blank");
+                var a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
             }
         }
         window.onload = redirect;
